@@ -44,12 +44,6 @@ function collision.remove_brick(brick_id)
 	end)
 end
 
-function collision.print()
-	pprint('ball_id', ball_id)
-	pprint('pad_id', collision.pad_id)
-	pprint(manager.bricks)
-end
-
 function collision.check()
 	local result, count = aabb.query_id(collision_group_id, ball_id)
 	return result, count
