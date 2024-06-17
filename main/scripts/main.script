@@ -1,0 +1,29 @@
+local pad = require('main.scripts.pad')
+local ball = require('main.scripts.ball')
+local bricks = require('main.scripts.bricks')
+local collision = require('main.scripts.collision')
+
+function init(self)
+	msg.post(".", "acquire_input_focus")
+
+	collision.init()
+	bricks.init()
+	local ball_id = ball.init()
+	pad.init()
+	pad.attach_ball(ball_id)
+end
+
+function update(self, dt)
+	pad.update(dt)
+	ball.update(dt)
+end
+
+function on_message(self, message_id, message, sender)
+	if message_id == hash("launch") then
+		ball.launch()
+	end
+end
+
+function on_input(self, action_id, action)
+	pad.input(action_id, action)
+end

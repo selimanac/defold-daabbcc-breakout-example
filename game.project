@@ -1,0 +1,30 @@
+[bootstrap]
+main_collection = /main/main.collectionc
+render = /orthographic/render/orthographic.renderc
+
+[script]
+shared_state = 1
+
+[android]
+input_method = HiddenInputField
+
+[project]
+title = breakout
+dependencies#0 = https://github.com/britzl/defold-orthographic/archive/refs/heads/master.zip
+dependencies#1 = https://github.com/selimanac/DAABBCC/archive/refs/heads/v2.1.zip
+dependencies#2 = https://github.com/selimanac/defold-random/archive/master.zip
+
+[graphics]
+default_texture_min_filter = nearest
+default_texture_mag_filter = nearest
+
+[input]
+repeat_delay = 0.0
+repeat_interval = 0.0
+
+[display]
+vsync = 0
+
+[sprite]
+max_count = 512
+
