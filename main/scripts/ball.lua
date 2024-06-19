@@ -77,9 +77,7 @@ function ball.update(dt)
 			if result[1] == collision.pad_id and isPad == false then
 				handle_collision(manager.pad_position, manager.pad_size)
 				isPad = true
-			end
-
-			if result[1] ~= collision.pad_id then
+			elseif result[1] ~= collision.pad_id then
 				local brick = manager.bricks[result[1]]
 				handle_collision(brick.postion, brick)
 				collision.remove_brick(result[1])

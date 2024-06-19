@@ -32,8 +32,7 @@ function pad.update(dt)
 	if pressed then
 		if manager.pad_position.x >= -(manager.screen.w - 40) and manager.pad_movement.x == -1 then
 			update_position(dt)
-		end
-		if manager.pad_position.x <= (manager.screen.w - 40) and manager.pad_movement.x == 1 then
+		elseif manager.pad_position.x <= (manager.screen.w - 40) and manager.pad_movement.x == 1 then
 			update_position(dt)
 		end
 	end
@@ -43,8 +42,7 @@ function pad.input(action_id, action)
 	if (action_id == manager.keys['left'] or action_id == manager.keys['right']) and action.released then
 		pressed = false
 		manager.pad_movement = zero
-	end
-	if action_id == manager.keys['left'] and action.repeated then
+	elseif action_id == manager.keys['left'] and action.repeated then
 		pressed = true
 		manager.pad_movement = left
 	elseif action_id == manager.keys['right'] and action.repeated then

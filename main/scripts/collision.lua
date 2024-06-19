@@ -4,6 +4,8 @@ local collision          = {}
 
 local collision_group_id = -1
 local ball_id            = -1
+local result             = {}
+local count              = 0
 collision.pad_id         = -1
 
 function collision.init()
@@ -11,8 +13,8 @@ function collision.init()
 end
 
 local function add_gameobject(go_url, width, height)
-	local go_url = msg.url(go_url)
-	return aabb.insert_gameobject(collision_group_id, go_url, width, height)
+	local go_msg_url = msg.url(go_url)
+	return aabb.insert_gameobject(collision_group_id, go_msg_url, width, height)
 end
 
 function collision.add_ball(go_url, width, height)
@@ -45,7 +47,7 @@ function collision.remove_brick(brick_id)
 end
 
 function collision.check()
-	local result, count = aabb.query_id(collision_group_id, ball_id)
+	result, count = aabb.query_id(collision_group_id, ball_id)
 	return result, count
 end
 
