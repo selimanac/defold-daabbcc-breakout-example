@@ -28,3 +28,6 @@ vsync = 0
 [sprite]
 max_count = 512
 
+[native_extension]
+app_manifest = /breakout.appmanifest
+
