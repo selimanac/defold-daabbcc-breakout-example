@@ -1,6 +1,6 @@
 # DAABBCC Breakout Example
 
-Breakout example using [DAABBCC](https://github.com/selimanac/DAABBCC).    
+Breakout example using [DAABBCC](https://github.com/selimanac/defold-daabbcc).    
 
 Play it here: https://selimanac.github.io/DAABBCC-Breakout-Example/ 
 

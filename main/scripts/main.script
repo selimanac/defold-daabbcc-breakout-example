@@ -5,6 +5,7 @@ local collision = require('main.scripts.collision')
 
 function init(self)
 	msg.post(".", "acquire_input_focus")
+	msg.post("@render:", "use_camera_projection")
 
 	collision.init()
 	bricks.init()
