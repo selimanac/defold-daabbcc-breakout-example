@@ -2,7 +2,7 @@
 
 Breakout example using [DAABBCC](https://github.com/selimanac/defold-daabbcc).    
 
-Play it here: https://selimanac.github.io/DAABBCC-Breakout-Example/ 
+Play it here: https://selimanac.github.io/defold-daabbcc-breakout-example/
 
 ![DAABBCC Breakout](/.github/breakout.png?raw=true) 
 
